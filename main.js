@@ -48,7 +48,7 @@ let i = 1;
 imagem.addEventListener("click", evento => {
   const caminhoImagem = imagens[i % imagens.length].caminho;
   imagem.src = caminhoImagem;
-  console.log(`Imagem ${imagens[i % imagens.length].cor} exibida.`);
+  //console.log(`Imagem ${imagens[i % imagens.length].cor} exibida.`);
   i++;
 });
 

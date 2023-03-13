@@ -34,6 +34,30 @@ const pecas = {
     }
 }
 
+const imagem = document.querySelector("#robotron")
+var i=1
+imagem.addEventListener("click", (evento)=>{
+    console.log(evento.srcElement.src)
+    switch(i){
+        case 0: evento.srcElement.src = "img/imagens-do-robotron/Robotron 2000 - Amarelo/Robotron 2000 - Amarelo.png"
+            break
+        case 1: evento.srcElement.src = "img/imagens-do-robotron/Robotron 2000 - Azul/Robotron 2000 - Azul.png"
+            break
+        case 2: evento.srcElement.src = "img/imagens-do-robotron/Robotron 2000 - Branco/Robotron 2000 - Branco.png"
+            break
+        case 3: evento.srcElement.src = "img/imagens-do-robotron/Robotron 2000 - Preto/Robotron 2000 - Preto.png"
+            break
+        case 4: evento.srcElement.src = "img/imagens-do-robotron/Robotron 2000 - Rosa/Robotron 2000 - Rosa.png"
+            break  
+        case 5: evento.srcElement.src = "img/imagens-do-robotron/Robotron 2000 - Vermelho/Robotron 2000 - Vermelho.png"
+            break  
+    }
+   
+    console.log(i)
+    i++
+    if(i>5) i=0
+})
+
 controle.forEach((elemento) => {
     elemento.addEventListener("click", (evento)=>{
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode)
